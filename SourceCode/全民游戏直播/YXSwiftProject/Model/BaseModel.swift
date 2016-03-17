@@ -13,22 +13,31 @@ protocol BaseModelProtocol {
     static func propertyNameForKey(key: String) -> String
     //特殊key对应
     static func objectClassForKey(key: String) -> AnyClass?
-
+    
 }
 
 extension String{
     
     //love_me -> loveMe
     var upperWords: String{
-        let tmpArr = self.componentsSeparatedByString("_")
-        var tmpStr = ""
+        var tmpString = ""
+        var spec_ = false //是否遇到_
         
-        for var str in tmpArr {
+        for index in self.characters.indices {
+            var tmpS = String(self[index])
+            guard tmpS != "_" else {
+                spec_ = true
+                continue
+            }
             
-            str = str.uppercaseString
-            tmpStr += str
+            if spec_ {
+                tmpS = tmpS.uppercaseString
+                spec_ = false
+            }
+            tmpString += tmpS
         }
-        return tmpStr
+        
+        return tmpString
     }
     
     
@@ -36,7 +45,7 @@ extension String{
 }
 
 class BaseModel: NSObject, BaseModelProtocol {
-
+    
     override func setNilValueForKey(key: String) {
     }
     
@@ -63,7 +72,7 @@ class BaseModel: NSObject, BaseModelProtocol {
     
     class func parseDic(dic: [String: AnyObject]) -> AnyObject{
         let obj = super.init()
-//        obj.setValuesForKeysWithDictionary(dic)
+        //        obj.setValuesForKeysWithDictionary(dic)
         for (key, value) in dic {
             let tmpKey = self.propertyNameForKey(key)
             var tmpObj = value
@@ -83,6 +92,6 @@ class BaseModel: NSObject, BaseModelProtocol {
         return tmpList
     }
     
-
+    
     
 }
