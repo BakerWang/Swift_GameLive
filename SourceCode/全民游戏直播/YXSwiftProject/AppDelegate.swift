@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        GameLiveNetManager.getCategories { (model) in
+            print("")
+            if let tmpArr = model as? [AnyObject] {
+                for obj in tmpArr{
+                    if let object = obj as? CategoriesModel{
+                        print(object.firstLetter);
+                        
+                    }   
+                }
+            }
+        }
+        
         return true
     }
 

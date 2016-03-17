@@ -14,6 +14,9 @@
 		38891F551C9AC3AC00D0B283 /* RequestPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F541C9AC3AC00D0B283 /* RequestPaths.swift */; };
 		38891F571C9AC56A00D0B283 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F561C9AC56A00D0B283 /* Constants.swift */; };
 		38891F5A1C9AD92100D0B283 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F591C9AD92100D0B283 /* Tool.swift */; };
+		38891F5D1C9AEE1500D0B283 /* GameLiveNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F5C1C9AEE1500D0B283 /* GameLiveNetManager.swift */; };
+		38891F611C9AF2FD00D0B283 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F601C9AF2FD00D0B283 /* CategoriesModel.swift */; };
+		38891F631C9AF4DD00D0B283 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F621C9AF4DD00D0B283 /* BaseModel.swift */; };
 		38F8C0521C9A6B8000A1F726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F8C0511C9A6B8000A1F726 /* AppDelegate.swift */; };
 		5857A9EC13D72763631685B5 /* Pods_YXSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD90FD2802B84EEB1FDEA1D3 /* Pods_YXSwiftProject.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +30,9 @@
 		38891F541C9AC3AC00D0B283 /* RequestPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPaths.swift; sourceTree = "<group>"; };
 		38891F561C9AC56A00D0B283 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		38891F591C9AD92100D0B283 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		38891F5C1C9AEE1500D0B283 /* GameLiveNetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLiveNetManager.swift; sourceTree = "<group>"; };
+		38891F601C9AF2FD00D0B283 /* CategoriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		38891F621C9AF4DD00D0B283 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		38F8C04E1C9A6B8000A1F726 /* YXSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F8C0511C9A6B8000A1F726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C22FE51F57BE11BFA5824CD /* Pods-YXSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXSwiftProject/Pods-YXSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +95,30 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		38891F5B1C9AEDF500D0B283 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				38891F5C1C9AEE1500D0B283 /* GameLiveNetManager.swift */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		38891F5E1C9AF2DA00D0B283 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38891F601C9AF2FD00D0B283 /* CategoriesModel.swift */,
+				38891F621C9AF4DD00D0B283 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38891F5F1C9AF2DA00D0B283 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		38F8C0451C9A6B8000A1F726 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +140,9 @@
 		38F8C0501C9A6B8000A1F726 /* YXSwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				38891F5E1C9AF2DA00D0B283 /* Model */,
+				38891F5F1C9AF2DA00D0B283 /* ViewModel */,
+				38891F5B1C9AEDF500D0B283 /* NetManager */,
 				38891F581C9AD90F00D0B283 /* Tool */,
 				38891F521C9AC34E00D0B283 /* Constants */,
 				38891F431C9AC23900D0B283 /* Resource */,
@@ -263,7 +296,10 @@
 				38891F511C9AC23900D0B283 /* ViewController.swift in Sources */,
 				38F8C0521C9A6B8000A1F726 /* AppDelegate.swift in Sources */,
 				38891F551C9AC3AC00D0B283 /* RequestPaths.swift in Sources */,
+				38891F5D1C9AEE1500D0B283 /* GameLiveNetManager.swift in Sources */,
+				38891F611C9AF2FD00D0B283 /* CategoriesModel.swift in Sources */,
 				38891F5A1C9AD92100D0B283 /* Tool.swift in Sources */,
+				38891F631C9AF4DD00D0B283 /* BaseModel.swift in Sources */,
 				38891F571C9AC56A00D0B283 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

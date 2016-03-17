@@ -34,17 +34,11 @@ struct RequestPathManager {
         case .ad:
             path = "json/page/ad-slot/info.json"
         case .categoryRooms:
-//            guard other.1 == nil else {
-//                assert(false, "\(self, #function) other.1 参数不能为nil")
-//            }
-            
-            if other.1 == nil {
-                showNilWarning("\(self, #function)")
+            if let sender = other.1 {
+                path = "json/categories/\(sender)/list.json"
             }else{
-                path = "json/categories/\(other.1!)/list.json"
+                showNilWarning("\(self, #function)")
             }
-            
-            
         case .intro:
             path = "json/page/app-index/info.json"
         case .search:
@@ -54,15 +48,12 @@ struct RequestPathManager {
         case .rooms:
             path = "json/play/list\(page).json"
         case .video:
-//            guard other.1 == nil else {
-//                assert(false, "\(self ,#function) other.1 参数不能为nil")
-//            }
-            if other.1 == nil {
-                showNilWarning("\(self, #function)")
+            if let sender = other.1 {
+                path = "http://hls.quanmin.tv/live/\(sender)/playlist.m3u8"
+                return path;
             }else{
-                path = "http://hls.quanmin.tv/live/\(other.1!)/playlist.m3u8"
+                showNilWarning("\(self, #function)")
             }
-            
         }
         return self.basePath + path
     }
