@@ -10,8 +10,10 @@
 		38891F4D1C9AC23900D0B283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38891F441C9AC23900D0B283 /* Assets.xcassets */; };
 		38891F4E1C9AC23900D0B283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38891F451C9AC23900D0B283 /* LaunchScreen.storyboard */; };
 		38891F4F1C9AC23900D0B283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38891F471C9AC23900D0B283 /* Main.storyboard */; };
-		38891F501C9AC23900D0B283 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38891F4A1C9AC23900D0B283 /* Info.plist */; };
 		38891F511C9AC23900D0B283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F4C1C9AC23900D0B283 /* ViewController.swift */; };
+		38891F551C9AC3AC00D0B283 /* RequestPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F541C9AC3AC00D0B283 /* RequestPaths.swift */; };
+		38891F571C9AC56A00D0B283 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F561C9AC56A00D0B283 /* Constants.swift */; };
+		38891F5A1C9AD92100D0B283 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38891F591C9AD92100D0B283 /* Tool.swift */; };
 		38F8C0521C9A6B8000A1F726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F8C0511C9A6B8000A1F726 /* AppDelegate.swift */; };
 		5857A9EC13D72763631685B5 /* Pods_YXSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD90FD2802B84EEB1FDEA1D3 /* Pods_YXSwiftProject.framework */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,9 @@
 		38891F481C9AC23900D0B283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38891F4A1C9AC23900D0B283 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38891F4C1C9AC23900D0B283 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38891F541C9AC3AC00D0B283 /* RequestPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPaths.swift; sourceTree = "<group>"; };
+		38891F561C9AC56A00D0B283 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38891F591C9AD92100D0B283 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		38F8C04E1C9A6B8000A1F726 /* YXSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F8C0511C9A6B8000A1F726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C22FE51F57BE11BFA5824CD /* Pods-YXSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXSwiftProject/Pods-YXSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +72,23 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		38891F521C9AC34E00D0B283 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				38891F541C9AC3AC00D0B283 /* RequestPaths.swift */,
+				38891F561C9AC56A00D0B283 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		38891F581C9AD90F00D0B283 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				38891F591C9AD92100D0B283 /* Tool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		38F8C0451C9A6B8000A1F726 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,8 @@
 		38F8C0501C9A6B8000A1F726 /* YXSwiftProject */ = {
 			isa = PBXGroup;
 			children = (
+				38891F581C9AD90F00D0B283 /* Tool */,
+				38891F521C9AC34E00D0B283 /* Constants */,
 				38891F431C9AC23900D0B283 /* Resource */,
 				38891F491C9AC23900D0B283 /* Supporting Files */,
 				38891F4B1C9AC23900D0B283 /* ViewController */,
@@ -175,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38891F501C9AC23900D0B283 /* Info.plist in Resources */,
 				38891F4F1C9AC23900D0B283 /* Main.storyboard in Resources */,
 				38891F4D1C9AC23900D0B283 /* Assets.xcassets in Resources */,
 				38891F4E1C9AC23900D0B283 /* LaunchScreen.storyboard in Resources */,
@@ -239,6 +262,9 @@
 			files = (
 				38891F511C9AC23900D0B283 /* ViewController.swift in Sources */,
 				38F8C0521C9A6B8000A1F726 /* AppDelegate.swift in Sources */,
+				38891F551C9AC3AC00D0B283 /* RequestPaths.swift in Sources */,
+				38891F5A1C9AD92100D0B283 /* Tool.swift in Sources */,
+				38891F571C9AC56A00D0B283 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +378,7 @@
 			baseConfigurationReference = F1376299DBBA227631520D34 /* Pods-YXSwiftProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = YXSwiftProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YXSwiftProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.YXSwiftProject;
@@ -365,7 +391,7 @@
 			baseConfigurationReference = 6C22FE51F57BE11BFA5824CD /* Pods-YXSwiftProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = YXSwiftProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YXSwiftProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tedu.YXSwiftProject;
